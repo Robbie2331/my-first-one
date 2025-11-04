@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bob's Home Services</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Bob's Home Services logo" class="logo" />
+      <h1>Bob's Home Services</h1>
+    </div>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-label="Hero - middle class house background">
+      <div class="hero-overlay">
+        <h2>Reliable, friendly home services for every family</h2>
+        <p>Plumbing, electrical, lawn care, painting — trusted local pros from Bob's.</p>
+        <a class="cta" href="#contact">Request a Quote</a>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <h3>Our Services</h3>
+      <div class="service-list">
+        <article class="service-card">
+          <h4>Plumbing</h4>
+          <p>Repairs, installations, and maintenance for sinks, toilets, and more.</p>
+        </article>
+
+        <article class="service-card">
+          <h4>Electrical</h4>
+          <p>Safe wiring, outlet installation, and lighting upgrades.</p>
+        </article>
+
+        <article class="service-card">
+          <h4>Lawn & Garden</h4>
+          <p>Mowing, edging, seasonal cleanup, and small landscape tasks.</p>
+        </article>
+
+        <article class="service-card">
+          <h4>Painting</h4>
+          <p>Interior and exterior painting with careful prep and clean-up.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h3>About Bob</h3>
+      <p>Bob's Home Services is a small local team focused on reliable, honest work for middle-class households. We show up on time, do the job right, and treat your home like it's our own.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h3>Request a Quote</h3>
+      <form id="quoteForm" novalidate>
+        <label>
+          Full name
+          <input type="text" name="name" id="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" id="email" required />
+        </label>
+
+        <label>
+          Phone
+          <input type="tel" name="phone" id="phone" />
+        </label>
+
+        <label>
+          Service needed
+          <select name="service" id="service">
+            <option>Plumbing</option>
+            <option>Electrical</option>
+            <option>Lawn &amp; Garden</option>
+            <option>Painting</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" id="message" rows="4" placeholder="Describe what you need..."></textarea>
+        </label>
+
+        <button type="submit" class="submit-btn">Send Request</button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Bob's Home Services — Serving the neighborhood</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
